@@ -9,7 +9,7 @@ import { BetonskeCesmeComponent } from './betonske-cesme/betonske-cesme.componen
 import { GrckiStuboviComponent } from './grcki-stubovi/grcki-stubovi.component';
 import { MontazniObjektiComponent } from './montazni-objekti/montazni-objekti.component';
 import { BetonskeOgradeComponent } from './betonske-ograde/betonske-ograde.component';
-
+import {MaterialModule} from './material.module'
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,6 +22,7 @@ import { BetonskeOgradeComponent } from './betonske-ograde/betonske-ograde.compo
   imports: [
     BrowserModule,
     AppRoutingModule,
+    MaterialModule,
     BrowserAnimationsModule
   ],
   providers: [],
