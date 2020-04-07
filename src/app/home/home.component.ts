@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
 import { SwiperOptions } from 'swiper';
 
 @Component({
@@ -8,6 +8,8 @@ import { SwiperOptions } from 'swiper';
 })
 export class HomeComponent implements OnInit {
 
+  @ViewChild('mapContainer', {static: false}) gmap: ElementRef;
+  map: google.maps.Map;
   constructor() { }
 
   ngOnInit() {

@@ -51,7 +51,6 @@
 }
 
 .header-h1 {
-  font-family: 'Fredoka One', cursive;
   font-size: 60px;
   color: #ff9d00;
 }
@@ -83,3 +82,24 @@
 }
 
 /* About */
+
+.card-header-div{
+  padding-top: 5em;
+  padding-bottom: 5em;
+}
+
+.orange-divider{
+  border-top-color: #ff9d00;
+}
+.card-h3{
+  padding-top: 1em;
+}
+
+.second-row{
+  margin-top: 3em;
+}
+
+#map {
+  height: 500px;
+  width: 100%;
+ }
