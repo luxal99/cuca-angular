@@ -10,6 +10,8 @@ import { GrckiStuboviComponent } from './grcki-stubovi/grcki-stubovi.component';
 import { MontazniObjektiComponent } from './montazni-objekti/montazni-objekti.component';
 import { BetonskeOgradeComponent } from './betonske-ograde/betonske-ograde.component';
 import {MaterialModule} from './material.module'
+import { NgxUsefulSwiperModule } from 'ngx-useful-swiper';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,6 +24,7 @@ import {MaterialModule} from './material.module'
   imports: [
     BrowserModule,
     AppRoutingModule,
+    NgxUsefulSwiperModule,
     MaterialModule,
     BrowserAnimationsModule
   ],

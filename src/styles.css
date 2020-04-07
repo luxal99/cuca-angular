@@ -1,4 +1,20 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css?family=Oswald&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Fredoka+One&display=swap');
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+.swiper-container{
+    padding: 5em;
+}
+
+body{
+    background-color: #eee;
+}
+
+h1 {
+    font-family: 'Fredoka One', cursive;
+  }
+  p{
+    font-family: 'Lato', sans-serif;
+    font-size: 20px;
+  }
+  

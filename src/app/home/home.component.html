@@ -1,4 +1,68 @@
-<mat-form-field class="example-full-width">
-    <mat-label>Favorite food</mat-label>
-    <input matInput placeholder="Ex. Pizza" value="Sushi">
-  </mat-form-field>
+<mat-drawer-container fullscreen class="example-container" value="true">
+  <mat-drawer #drawer mode="over" class="sidenav-content zoom">
+    <div class="text-right">
+      <a>
+        <mat-icon>close</mat-icon>
+      </a>
+    </div>
+    <div class="content text-left" style="position: fixed;padding-top: 3em;">
+
+    </div>
+
+    <div class="text-left-social-div side-icon" style="padding-top: 4em;">
+      <a href=""><i class="fa fa-facebook social-icon"></i></a>
+      <a href=""><i class="fa fa-instagram social-icon-left"></i></a>
+      <a href=""><i class="fa fa-linkedin social-icon-left"></i></a>
+    </div>
+  </mat-drawer>
+  <mat-drawer-content>
+    <div class="header-div">
+      <div class="">
+        <button class="menu-btn" color="primary" mat-button (click)="drawer.toggle()">
+          <mat-icon class="menu-icon">menu</mat-icon>
+        </button>
+      </div>
+      <div class="header container">
+        <h1 class="text-center header-h1">Betonske ograde</h1>
+        <mat-divider></mat-divider>
+        <p class="header-paragraf text-center">Betonske ograde vrhunskog kvaliteta i modernog dizajna</p>
+      </div>
+      <div>
+        <swiper [config]="config">
+          <div class="swiper-wrapper product-slider-container">
+
+            <div class="swiper-slide"></div>
+            <div class="swiper-slide"></div>
+
+          </div>
+
+          <!-- Add Pagination -->
+          <div class="swiper-pagination"></div>
+
+          <!-- Add Arrows -->
+
+        </swiper>
+      </div>
+    </div>
+
+  <div class="about-div">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm">
+          <img src="../../assets/img/about-people.png" alt="" class="img-fluid">
+        </div>
+        <div class="col-sm text-center">
+          <h1 class="about-h1">O nama</h1>
+          <mat-divider class="orange-divider"></mat-divider>
+          <p class="text-center about-paragraf">
+            Firma "CUCA" je osnovana 1997 godine. Od otvaranja radimo na proširivanju asortimana kako bi zadovoljili
+            zelje mnogobrojnih kupaca širom Srbije. Mnogobrojni modeli ograda, grčkih stubova, česmi, žardinjera,
+            bastenskih garnitura.. Zadovoljstvo nam je da vam učinimo životno okruženje lepšim uz ograde "CUCA".
+            Dobrodošli!
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  </mat-drawer-content>
+</mat-drawer-container>
