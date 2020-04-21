@@ -11,6 +11,7 @@ import { MontazniObjektiComponent } from './montazni-objekti/montazni-objekti.co
 import { BetonskeOgradeComponent } from './betonske-ograde/betonske-ograde.component';
 import {MaterialModule} from './material.module'
 import { NgxUsefulSwiperModule } from 'ngx-useful-swiper';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { NgxUsefulSwiperModule } from 'ngx-useful-swiper';
     BetonskeCesmeComponent,
     GrckiStuboviComponent,
     MontazniObjektiComponent,
-    BetonskeOgradeComponent
+    BetonskeOgradeComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

@@ -103,3 +103,36 @@
   height: 500px;
   width: 100%;
  }
+
+ .fop-div{
+   background-color: #121212;
+   padding-top: 10em;
+  padding-bottom: 10em;
+ }
+
+ .fop-div p{
+   color: #e1e1e1;
+   padding-top: 1em;
+ }
+
+ .fop-div h1{
+   color: #ff9d00;
+   padding-top: 1 em;
+ }
+
+ .fop-btn{
+   padding-top: .5em;
+   padding-bottom: .5em;
+   font-size: 18px;
+   color: #e1e1e1;
+ }
+ .radna-akcija-img{
+  -webkit-box-shadow: 2px 15px 26px -15px rgba(0,0,0,0.75);
+  -moz-box-shadow: 2px 15px 26px -15px rgba(0,0,0,0.75);
+  box-shadow: 2px 15px 26px -15px rgba(0,0,0,0.75);
+ }
+
+ .radna-akcija-div{
+   padding-top: 5em;
+   padding-bottom: 5em;
+ }

@@ -10,6 +10,8 @@
     "module": "esnext",
     "moduleResolution": "node",
     "importHelpers": true,
+    "outDir": "./out-tsc/app",
+    "types": ["googlemaps"],
     "target": "es2015",
     "typeRoots": [
       "node_modules/@types"
