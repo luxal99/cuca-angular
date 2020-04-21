@@ -1,0 +1,10 @@
+.header{
+    background-image: url('../../assets/img/005_stubovi_grcki_02.jpg');
+    height: 60vh;
+    background-size: cover;
+    padding-top: 10em;
+    background-position: center;
+}
+li{
+    list-style-type: none;
+}
