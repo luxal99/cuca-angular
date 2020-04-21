@@ -25,12 +25,16 @@
             ],
             "styles": [
               "src/assets/scss/theme.scss",
+              "./node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "./node_modules/swiper/css/swiper.css",
+              "./node_modules/font-awesome/css/font-awesome.css",
               "src/styles.css"
             ],
             "scripts": [
               "node_modules/aos/dist/aos.css",
               "./node_modules/swiper/js/swiper.min.js",
-              "node_modules/bootstrap/dist/css/bootstrap.min.css",
+              
+              
             ]
           },
           "configurations": {
