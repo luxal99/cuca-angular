@@ -31,13 +31,22 @@
   align-items: center;
 }
 
-.swiper-slide {
+.swiper-slide-1 {
   background-image: url('../../assets/img/balvani.jpg');
+}
+
+
+.swiper-slide-2 {
+  background-image: url('../../assets/img/oblica.jpg');
+}
+
+.swiper-slide-3 {
+  background-image: url('../../assets/img/Pletena-New-min_20.jpg');
 }
 
 .swiper-container {
   width: 100%;
-  ;
+  
 }
 
 .swiper-slide {

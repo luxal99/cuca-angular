@@ -24,10 +24,11 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div class="navbar-nav">
-            <a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
-            <a class="nav-item nav-link" href="#">Features</a>
-            <a class="nav-item nav-link" href="#">Pricing</a>
-            <a class="nav-item nav-link disabled" href="#">Disabled</a>
+            <a class="nav-item nav-link active"  routerLinkActive="router-link-active" >Pocetna <span class="sr-only">(current)</span></a>
+            <a class="nav-item nav-link" [routerLink]="['/ograde']" routerLinkActive="router-link-active" >Ograde</a>
+            <a class="nav-item nav-link" [routerLink]="['/cesme']" routerLinkActive="router-link-active" >Cesme</a>
+            <a class="nav-item nav-link" [routerLink]="['/stubovi']" routerLinkActive="router-link-active" >Stubovi</a>
+            <a class="nav-item nav-link " [routerLink]="['/objekti']" routerLinkActive="router-link-active" >Montazni objekti</a>
           </div>
         </div>
       </nav>
@@ -45,8 +46,9 @@
         <swiper [config]="config">
           <div class="swiper-wrapper product-slider-container">
 
-            <div class="swiper-slide"></div>
-            <div class="swiper-slide"></div>
+            <div class="swiper-slide swiper-slide-1"></div>
+            <div class="swiper-slide swiper-slide-2"></div>
+            <div class="swiper-slide swiper-slide-3"></div>
 
           </div>
 
