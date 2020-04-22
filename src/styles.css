@@ -1,4 +1,19 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css?family=Oswald&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Alfa+Slab+One&display=swap');
+.swiper-container {
+    padding: 5em;
+}
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body {
+    background-color: #eee;
+}
+
+h1, h3 {
+    font-family: 'Alfa Slab One', cursive;
+}
+
+p,h4 {
+    font-family: 'Lato', sans-serif;
+    font-size: 20px;
+}

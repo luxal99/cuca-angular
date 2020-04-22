@@ -1,0 +1,30 @@
+.header{
+    background-image: url('../../assets/img/005_stubovi_grcki_02.jpg');
+    height: 60vh;
+    background-size: cover;
+    padding-top: 10em;
+    background-position: center;
+}
+li{
+    list-style-type: none;
+}
+
+.row{
+    margin: 0 !important;
+}
+i{
+    color: #ff9d00;
+}
+h1{
+    color: #ff9d00;
+}
+p{
+    color: #eee;
+}
+.content{
+    background-color: #222;
+}
+
+mat-divider{
+    border-top-color: #ff9d00;
+}
