@@ -1,1 +1,247 @@
-<p>betonske-ograde works!</p>
+<div class="content">
+  <div class="header">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <a class="navbar-brand" href="#">Navbar</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Features</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Pricing</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" href="#">Disabled</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div class="container header-text-container text-center">
+      <h1 class="header-h1">Moderan</h1>
+      <mat-divider class="orange-divider"></mat-divider>
+      <p class="header-paragraf">Kvalitet i moderan dizajn jesu glavni aduti naših ograda.U ponudi imamo preko 16
+        različitih modela.Montaža i do
+        80 metara dnevno</p>
+      <button class="header-btn" mat-button>Pogledaj modele</button>
+    </div>
+  </div>
+  <div>
+    <div class="container">
+      <h1 class="ograde-h1 text-center">
+        Modeli ograda
+      </h1>
+    </div>
+
+    <div class="container  card-container">
+      <h1></h1>
+      <div class="row">
+        <div class="col-sm">
+          <img src="../../assets/img/koplja-min.jpg" style="height: 190px;" alt="" class="img-fluid">
+          <h3 class="text-center" style="padding-top: .5em;">Koplja otvorena</h3>
+          <mat-divider></mat-divider>
+          <h3 class="text-center"><i class="fa fa-pencil-square"></i>170cm</h3>
+          <div class="text-center">
+            <button mat-raised-button>Slike</button>
+          </div>
+        </div>
+        <div class="col-sm">
+          <img src="../../assets/img/koplja_otvorena.jpg" style="height: 190px;" alt="" class="img-fluid">
+          <h3 style="padding-top: .5em;" class="text-center">Koplja</h3>
+          <mat-divider></mat-divider>
+          <h3 class="text-center"><i class="fa fa-pencil-square"></i>208cm</h3>
+          <div class="text-center">
+            <button mat-raised-button>Slike</button>
+          </div>
+        </div>
+        <div class="col-sm">
+          <img src="../../assets/img/balusterka.jpg" style="height: 190px;" alt="" class="img-fluid">
+          <h3 style="padding-top: .5em;" class="text-center">Balusterka</h3>
+          <mat-divider></mat-divider>
+          <h3 class="text-center"><i class="fa fa-pencil-square"></i>208cm</h3>
+          <div class="text-center">
+            <button mat-raised-button>Slike</button>
+          </div>
+        </div>
+        <div class="col-sm">
+          <img src="../../assets/img/tablica-new.jpg" alt="" class="img-fluid">
+          <h3 style="padding-top: .5em;" class="text-center">Cokolada</h3>
+          <mat-divider></mat-divider>
+          <h3 class="text-center"><i class="fa fa-pencil-square"></i>208cm</h3>
+          <div class="text-center">
+            <button mat-raised-button>Slike</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <h1 class="text-center">
+      Prednosti
+    </h1>
+    <mat-divider></mat-divider>
+    <div class="row" style="padding-top: 2em;">
+      <div class="col-sm prednosti-card">
+        <li *ngFor="let item of leftArray">
+          <p><i class="fa fa-check"></i> {{item}}</p>
+        </li>
+      </div>
+      <div class="col-sm prednosti-card" style="margin-left: 2em;">
+        <li *ngFor="let item of leftArray">
+          <p><i class="fa fa-check"></i> {{item}}</p>
+        </li>
+      </div>
+    </div>
+  </div>
+  <div class="container card-container-lg">
+    <div class="row">
+      <div class="col-sm">
+        <img src="../../assets/img/rsz_dijamnat.jpg" style="height: 190px;" alt="" class="img-fluid">
+        <h3 class="text-center" style="padding-top: .5em;">Dijamant</h3>
+        <mat-divider class="orange-divider"></mat-divider>
+        <h3 class="text-center"><i class="fa fa-pencil-square"></i>170cm</h3>
+        <div class="text-center">
+          <button mat-raised-button>Slike</button>
+        </div>
+      </div>
+      <div class="col-sm">
+        <img src="../../assets/img/kocka.jpg" style="height: 190px;" alt="" class="img-fluid">
+        <h3 style="padding-top: .5em;" class="text-center">Kocka</h3>
+        <mat-divider class="orange-divider"></mat-divider>
+        <h3 class="text-center"><i class="fa fa-pencil-square"></i>208cm</h3>
+        <div class="text-center">
+          <button mat-raised-button>Slike</button>
+        </div>
+      </div>
+      <div class="col-sm">
+        <img src="../../assets/img/rsz_kosina.jpg" style="height: 190px;" alt="" class="img-fluid">
+        <h3 style="padding-top: .5em;" class="text-center">Kosina</h3>
+        <mat-divider class="orange-divider"></mat-divider>
+        <h3 class="text-center"><i class="fa fa-pencil-square"></i>208cm</h3>
+        <div class="text-center">
+          <button mat-raised-button>Slike</button>
+        </div>
+      </div>
+      <div class="col-sm">
+        <img src="../../assets/img/romboidi-new.jpg" style="height: 190px;" alt="" class="img-fluid">
+        <h3 style="padding-top: .5em;" class="text-center">Romboidi</h3>
+        <mat-divider class="orange-divider"></mat-divider>
+        <h3 class="text-center"><i class="fa fa-pencil-square"></i>208cm</h3>
+        <div class="text-center">
+          <button mat-raised-button>Slike</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container card-container-tr">
+    <h1 class="ograde-h1">Pletena</h1>
+    <mat-divider></mat-divider>
+    <div class="row" style="padding-top: 2em;">
+      <div class="col-sm">
+        <img src="../../assets/img/rsz_1pletena.jpg" alt="" class="img-fluid">
+        <h3 class="text-center" style="padding-top: .5em;">Koplja otvorena</h3>
+        <mat-divider></mat-divider>
+        <h3 class="text-center"><i class="fa fa-pencil-square"></i>170cm</h3>
+        <div class="text-center">
+          <button mat-raised-button>Slike</button>
+        </div>
+      </div>
+      <div class="col-sm">
+        <img src="../../assets/img/rsz_img_20190928_143733-min (1).jpg" style="height: 295px;" alt="" class="img-fluid">
+        <h3 style="padding-top: .5em;" class="text-center">Koplja</h3>
+        <mat-divider></mat-divider>
+        <h3 class="text-center"><i class="fa fa-pencil-square"></i>208cm</h3>
+        <div class="text-center">
+          <button mat-raised-button>Slike</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container  card-container-orange">
+    <h1></h1>
+    <div class="row">
+      <div class="col-sm">
+        <img src="../../assets/img/koplja-min.jpg" style="height: 190px;" alt="" class="img-fluid">
+        <h3 class="text-center" style="padding-top: .5em;">Koplja otvorena</h3>
+        <mat-divider></mat-divider>
+        <h3 class="text-center"><i class="fa fa-pencil-square"></i>170cm</h3>
+        <div class="text-center">
+          <button mat-raised-button>Slike</button>
+        </div>
+      </div>
+      <div class="col-sm">
+        <img src="../../assets/img/koplja_otvorena.jpg" style="height: 190px;" alt="" class="img-fluid">
+        <h3 style="padding-top: .5em;" class="text-center">Koplja</h3>
+        <mat-divider></mat-divider>
+        <h3 class="text-center"><i class="fa fa-pencil-square"></i>208cm</h3>
+        <div class="text-center">
+          <button mat-raised-button>Slike</button>
+        </div>
+      </div>
+      <div class="col-sm">
+        <img src="../../assets/img/balusterka.jpg" style="height: 190px;" alt="" class="img-fluid">
+        <h3 style="padding-top: .5em;" class="text-center">Balusterka</h3>
+        <mat-divider></mat-divider>
+        <h3 class="text-center"><i class="fa fa-pencil-square"></i>208cm</h3>
+        <div class="text-center">
+          <button mat-raised-button>Slike</button>
+        </div>
+      </div>
+      <div class="col-sm">
+        <img src="../../assets/img/tablica-new.jpg" alt="" class="img-fluid">
+        <h3 style="padding-top: .5em;" class="text-center">Cokolada</h3>
+        <mat-divider></mat-divider>
+        <h3 class="text-center"><i class="fa fa-pencil-square"></i>208cm</h3>
+        <div class="text-center">
+          <button mat-raised-button>Slike</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container card-container-tr">
+    <h1 class="ograde-h1">Balvani</h1>
+    <mat-divider></mat-divider>
+    <div class="row" style="padding-top: 2em;">
+      <div class="col-sm">
+        <img src="../../assets/img/oblica.jpg" alt="" class="img-fluid">
+        <h3 class="text-center" style="padding-top: .5em;">Balvani</h3>
+        <mat-divider></mat-divider>
+        <h3 class="text-center"><i class="fa fa-pencil-square"></i>174cm</h3>
+        <div class="text-center">
+          <button class="large-btn" mat-raised-button>Slike</button>
+        </div>
+      </div>
+      <div class="col-sm">
+        <img src="../../assets/img/rsz_img_20190928_143733-min (1).jpg" style="height: 295px;" alt="" class="img-fluid">
+        <h3 style="padding-top: .5em;" class="text-center">Balvani</h3>
+        <mat-divider></mat-divider>
+        <h3 class="text-center"><i class="fa fa-pencil-square"></i>174cm</h3>
+        <div class="text-center">
+          <button class="large-btn" mat-raised-button>Slike</button>
+        </div>
+      </div>
+    </div>
+    <h1 class="text-center" style="margin-top: 2em;">Zasto nase ograde</h1>
+    <p class="text-center why-paragraf">Nase ograde su jedno od najboljih resenja za ogradjivanje i zatvaranje vasih dvorista, firmi,
+      i parcela i nude
+      vam sigurnost i privatnost u vasem okruzenju. prednosti koje nude nase ograde su brojne, posebno naglasavajuci da
+      ne zahtevaju dalje odrzavanje. medju nasim asortimanom proizvoda mozete birati izmedju razlicitih zavrsnih obrada,
+      tekstura povrsine i boja koje odgovaraju vasem ukusu.</p>
+  </div>
+
+  <div class="container text-center gallery-div" style="margin-bottom: 5em;">
+    <div>
+      <img src="../../assets/img/rsz_1gallery-img-new.png" alt="" class="img-fluid">
+    </div>
+    <button class="large-btn" mat-raised-button>Galerija radova</button>
+  </div>
+
+</div>

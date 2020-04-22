@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css?family=Poiret+One&display=swap');
+.content {}
+
+.header {
+    background-image: url('../../assets/img/ograde-back-min.png');
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
+
+.header-h1 {
+    font-size: 60px;
+    color: #eee;
+    padding-bottom: .2em;
+}
+
+.header-paragraf {
+    padding-top: 1em;
+    color: #eee;
+}
+
+.orange-divider {
+    border-top-color: #ff9d00;
+}
+
+.header-text-container {
+    padding-top: 15%;
+}
+
+.header-btn {
+    padding-top: .5em;
+    padding-bottom: .5em;
+    padding-left: 3em;
+    padding-right: 3em;
+    color: #eee;
+    border: 1px solid #ff9d00;
+    font-size: 20px;
+    margin-top: 1em;
+}
+
+.ograde-h1 {
+    font-family: 'Poiret One', cursive;
+    font-size: 60px;
+}
+
+h3, h4 {
+    font-family: 'Poiret One', cursive;
+}
+
+.card-container {
+    padding-top: 2em;
+    padding-bottom: 2em;
+    background-color: #ff9d00;
+    margin-bottom: 5em;
+    -webkit-box-shadow: -1px 13px 35px -23px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -1px 13px 35px -23px rgba(0, 0, 0, 0.75);
+    box-shadow: -1px 13px 35px -23px rgba(0, 0, 0, 0.75);
+}
+
+.row {
+    margin: 0 !important;
+}
+
+li {
+    list-style-type: none;
+}
+
+.prednosti-card {
+    border: 1px solid #ff9d00;
+    padding-top: 2em;
+    padding-bottom: 2em;
+}
+
+.fa-check {
+    color: #ff9d00;
+}
+
+.card-container-lg {
+    margin-top: 5em;
+    background-color: #121212;
+    color: #ff9d00;
+    padding-top: 2em;
+    padding-bottom: 2em;
+    margin-bottom: 5em;
+    -webkit-box-shadow: -1px 13px 35px -23px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -1px 13px 35px -23px rgba(0, 0, 0, 0.75);
+    box-shadow: -1px 13px 35px -23px rgba(0, 0, 0, 0.75);
+}
+
+.orange-divider {
+    border-top-color: #444;
+}
+.card-container-tr{
+    
+}
+.card-container-orange{
+    margin-top: 5em;
+    margin-bottom: 5em;
+    -webkit-box-shadow: -1px 13px 35px -23px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: -1px 13px 35px -23px rgba(0, 0, 0, 0.75);
+    box-shadow: -1px 13px 35px -23px rgba(0, 0, 0, 0.75);
+    background-color: #ff9d00;
+    padding-top: 2em;
+    padding-bottom: 2em;
+}
+.why-paragraf{
+    border: 1px solid #ff9d00;
+    padding: 1em;
+}
+
+.large-btn{
+    padding-left: 3em;
+    padding-right:3em;
+    padding-top: .2em;
+    padding-bottom: .2em;
+
+}
+button{
+    font-size: 20px;
+    padding-left: 2em;
+    padding-right: 2em;
+}
