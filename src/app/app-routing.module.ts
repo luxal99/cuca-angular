@@ -6,7 +6,7 @@ import { BetonskeOgradeComponent } from './betonske-ograde/betonske-ograde.compo
 
 
 const routes: Routes = [
-  {path:'home',component:HomeComponent},
+  {path:'',component:HomeComponent},
   {path:'ograde',component:BetonskeOgradeComponent},
   {path:'stubovi',component:GrckiStuboviComponent}
 ];
