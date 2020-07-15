@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material';
+import { OgradeImgDialogComponent } from './ograde-img-dialog/ograde-img-dialog.component';
+import { OgradeGalleryDialogComponent } from './ograde-gallery-dialog/ograde-gallery-dialog.component';
+import { SwiperOptions } from 'swiper';
 
 
 
@@ -20,7 +24,7 @@ class Concrete {
 })
 export class BetonskeOgradeComponent implements OnInit {
 
-  constructor() { }
+  constructor(private dialog: MatDialog) { }
 
   ngOnInit() {
     this.createArr();
@@ -64,9 +68,57 @@ export class BetonskeOgradeComponent implements OnInit {
     this.concreteArr.push(new Concrete('Sitan kamen', '170cm', 'assets/img/sitan_kamen.jpg'))
     this.concreteArr.push(new Concrete('Koplja', '170cm', 'assets/img/koplja_siva.jpg'))
     this.concreteArr.push(new Concrete('Balvani', '174cm', 'assets/img/balvani-croped.jpg'))
-    this.concreteArr.push(new Concrete('Balvani', '174cm', 'assets/img/koplja-min.jpg'))
-     }
+    this.concreteArr.push(new Concrete('Balvani', '174cm', 'assets/img/IMG_20180611_121859.jpg'))
+  }
+
+  openDialog(image): void {
+    const dialogRef = this.dialog.open(OgradeImgDialogComponent, {
+      width: 'auto',
+      data: image
+    });
 
 
+  }
 
+  openGallery(image): void {
+    const dialogRef = this.dialog.open(OgradeGalleryDialogComponent, {
+      width: 'auto',
+      data: image
+    });
+
+
+  }
+
+  config: SwiperOptions = {
+    slidesPerView: 2,
+    spaceBetween: 100,
+    slidesPerGroup: 1,
+    loop: true,
+    loopFillGroupWithBlank: false,
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    }
+  }
+
+  mobileConfig: SwiperOptions = {
+    slidesPerView: 1,
+    spaceBetween: 200,
+    slidesPerGroup: 1,
+    loop: true,
+    loopFillGroupWithBlank: false,
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    }
+  }
 }
+

@@ -44,7 +44,8 @@
     font-size: 60px;
 }
 
-h3, h4 {
+h3,
+h4 {
     font-family: 'Poiret One', cursive;
 }
 
@@ -91,10 +92,10 @@ li {
 .orange-divider {
     border-top-color: #444;
 }
-.card-container-tr{
-    
-}
-.card-container-orange{
+
+.card-container-tr {}
+
+.card-container-orange {
     margin-top: 5em;
     margin-bottom: 5em;
     -webkit-box-shadow: -1px 13px 35px -23px rgba(0, 0, 0, 0.75);
@@ -104,20 +105,41 @@ li {
     padding-top: 2em;
     padding-bottom: 2em;
 }
-.why-paragraf{
+
+.why-paragraf {
     border: 1px solid #ff9d00;
     padding: 1em;
 }
 
-.large-btn{
+.large-btn {
     padding-left: 3em;
-    padding-right:3em;
+    padding-right: 3em;
     padding-top: .2em;
     padding-bottom: .2em;
-
 }
-button{
+
+button {
     font-size: 20px;
     padding-left: 2em;
     padding-right: 2em;
+}
+
+@media screen and (max-width:500px) {
+    .col-sm {
+        margin-top: 2em;
+        margin-left: 0 !important;
+    }
+    img {
+        height: auto !important;
+    }
+    .mobile-slider {
+        display: block !important;
+    }
+    .desktop-slider {
+        display: none;
+    }
+}
+
+::ng-deep.mat-dialog-container {
+    padding: 0 !important;
 }

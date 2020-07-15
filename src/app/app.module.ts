@@ -13,6 +13,8 @@ import {MaterialModule} from './material.module'
 import { NgxUsefulSwiperModule } from 'ngx-useful-swiper';
 import { FooterComponent } from './footer/footer.component';
 import { LocationStrategy, HashLocationStrategy } from '@angular/common';
+import { OgradeImgDialogComponent } from './betonske-ograde/ograde-img-dialog/ograde-img-dialog.component';
+import { OgradeGalleryDialogComponent } from './betonske-ograde/ograde-gallery-dialog/ograde-gallery-dialog.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { LocationStrategy, HashLocationStrategy } from '@angular/common';
     GrckiStuboviComponent,
     MontazniObjektiComponent,
     BetonskeOgradeComponent,
-    FooterComponent
+    FooterComponent,
+    OgradeImgDialogComponent,
+    OgradeGalleryDialogComponent
   ],
   imports: [
     BrowserModule,
@@ -32,6 +36,7 @@ import { LocationStrategy, HashLocationStrategy } from '@angular/common';
     BrowserAnimationsModule
   ],
   providers: [{ provide: LocationStrategy, useClass: HashLocationStrategy }],
+  entryComponents:[OgradeImgDialogComponent,OgradeGalleryDialogComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

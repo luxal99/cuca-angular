@@ -33,20 +33,13 @@
             <span class="navbar-toggler-icon"></span>
           </button>
                     <div class="collapse navbar-collapse" id="navbarNav">
-                        <ul class="navbar-nav">
-                            <li class="nav-item active">
-                                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Features</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Pricing</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link disabled" href="#">Disabled</a>
-                            </li>
-                        </ul>
+                        <div class="navbar-nav">
+                            <a class="nav-item nav-link" routerLinkActive="router-link-active">Pocetna <span class="sr-only">(current)</span></a>
+                            <a class="nav-item nav-link active" [routerLink]="['/ograde']" routerLinkActive="router-link-active">Ograde</a>
+                            <a class="nav-item nav-link" [routerLink]="['/cesme']" routerLinkActive="router-link-active">Cesme</a>
+                            <a class="nav-item nav-link" [routerLink]="['/stubovi']" routerLinkActive="router-link-active">Stubovi</a>
+                            <a class="nav-item nav-link " [routerLink]="['/objekti']" routerLinkActive="router-link-active">Montazni objekti</a>
+                        </div>
                     </div>
                 </nav>
                 <div class="container header-text-container text-center">
@@ -72,7 +65,7 @@
                             <mat-divider></mat-divider>
                             <h3 class="text-center"><i class="fa fa-pencil-square"></i>{{item.dimension}}</h3>
                             <div class="text-center">
-                                <button mat-raised-button>Slike</button>
+                                <button mat-raised-button (click)="openDialog(item.image)">Slike</button>
                             </div>
                         </div>
 
@@ -105,7 +98,7 @@
                         <mat-divider></mat-divider>
                         <h3 class="text-center"><i class="fa fa-pencil-square"></i>{{item.dimension}}</h3>
                         <div class="text-center">
-                            <button mat-raised-button>Slike</button>
+                            <button mat-raised-button (click)="openDialog(item.image)">Slike</button>
                         </div>
                     </div>
 
@@ -122,7 +115,7 @@
                         <mat-divider></mat-divider>
                         <h3 class="text-center"><i class="fa fa-pencil-square"></i>{{item.dimension}}</h3>
                         <div class="text-center">
-                            <button mat-raised-button>Slike</button>
+                            <button mat-raised-button (click)="openDialog(item.image)">Slike</button>
                         </div>
                     </div>
                 </div>
@@ -136,7 +129,7 @@
                         <mat-divider></mat-divider>
                         <h3 class="text-center"><i class="fa fa-pencil-square"></i>{{item.dimension}}</h3>
                         <div class="text-center">
-                            <button mat-raised-button>Slike</button>
+                            <button mat-raised-button (click)="openDialog(item.image)">Slike</button>
                         </div>
                     </div>
                 </div>
@@ -152,7 +145,7 @@
                         <mat-divider></mat-divider>
                         <h3 class="text-center"><i class="fa fa-pencil-square"></i>{{item.dimension}}</h3>
                         <div class="text-center">
-                            <button mat-raised-button>Slike</button>
+                            <button mat-raised-button (click)="openDialog(item.image)">Slike</button>
                         </div>
                     </div>
                 </div>
@@ -161,13 +154,52 @@
                     dalje odrzavanje. medju nasim asortimanom proizvoda mozete birati izmedju razlicitih zavrsnih obrada, tekstura povrsine i boja koje odgovaraju vasem ukusu.</p>
             </div>
 
-            <div class="container text-center gallery-div" style="margin-bottom: 5em;">
-                <div>
-                    <img src="../../assets/img/rsz_1gallery-img-new.png" alt="" class="img-fluid">
-                </div>
-                <button class="large-btn" mat-raised-button>Galerija radova</button>
+            <div class=" text-center gallery-div desktop-slider" style="margin-bottom: 5em;">
+                <swiper [config]="config" class="mobile-slider">
+
+                    <div class="swiper-wrapper product-slider-container">
+
+                        <div class="swiper-slide slider" *ngFor="let item of concreteArr">
+                            <div class="img-container">
+                                <img class="img-fluid" src="{{item.image}}" />
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                    <div class="swiper-pagination"></div>
+                    <!-- Add Arrows -->
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+
+
+                    <!-- Add Arrows -->
+
+                </swiper>
             </div>
 
+            <div class=" text-center gallery-div mobile-slider" style="margin-bottom: 5em;display: none;">
+                <swiper [config]="mobileConfig" class="mobile-slider">
+
+                    <div class="swiper-wrapper product-slider-container">
+
+                        <div class="swiper-slide slider" *ngFor="let item of concreteArr">
+                            <div class="img-container">
+                                <img width="400px" height="auto" src="{{item.image}}" />
+                            </div>
+                        </div>
+
+
+                    </div>
+
+
+
+
+                    <!-- Add Arrows -->
+
+                </swiper>
+            </div>
             <app-footer></app-footer>
 
         </div>
