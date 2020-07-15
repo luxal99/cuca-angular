@@ -12,6 +12,7 @@ import { BetonskeOgradeComponent } from './betonske-ograde/betonske-ograde.compo
 import {MaterialModule} from './material.module'
 import { NgxUsefulSwiperModule } from 'ngx-useful-swiper';
 import { FooterComponent } from './footer/footer.component';
+import { LocationStrategy, HashLocationStrategy } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,7 @@ import { FooterComponent } from './footer/footer.component';
     MaterialModule,
     BrowserAnimationsModule
   ],
-  providers: [],
+  providers: [{ provide: LocationStrategy, useClass: HashLocationStrategy }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

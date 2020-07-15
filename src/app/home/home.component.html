@@ -1,170 +1,167 @@
 <mat-drawer-container fullscreen class="example-container" value="true">
-  <mat-drawer #drawer mode="over" class="sidenav-content zoom">
-    <div class="text-right">
-      <a>
-        <mat-icon>close</mat-icon>
-      </a>
-    </div>
-    <div class="content text-left" style="position: fixed;padding-top: 3em;">
+    <mat-drawer #drawer mode="over" style="width: 90%;">
+        <div class="row" style="padding-top: 2em;">
+            <div class="col">
+                <img src="../../assets/img/LogoPNG.png" width="50px" alt="" class="img-fluid">
+            </div>
+            <div class="col text-right">
+                <button class="close-btn" (click)="drawer.toggle()" mat-button><i class="fa fa-close"></i></button>
+            </div>
+        </div>
 
-    </div>
-
-    <div class="text-left-social-div side-icon" style="padding-top: 4em;">
-      <a href=""><i class="fa fa-facebook social-icon"></i></a>
-      <a href=""><i class="fa fa-instagram social-icon-left"></i></a>
-      <a href=""><i class="fa fa-linkedin social-icon-left"></i></a>
-    </div>
-  </mat-drawer>
-  <mat-drawer-content>
-    <div class="header-div">
-      <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <img src="../../assets/img/LogoPNG.png" style="width: 50px;" alt="" class="img-fluid">  
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <div class="container menu-container">
+            <div class="text-center">
+                <button class="menu-btn current" mat-button>Pocetna</button>
+            </div>
+            <div class="text-center">
+                <button class="menu-btn menu-btn-1" [routerLink]="['/ograde']" routerLinkActive="router-link-active" mat-button>Ograde</button>
+            </div>
+            <div class="text-center">
+                <button class="menu-btn menu-btn-1" [routerLink]="['/stubovi']" routerLinkActive="router-link-active" mat-button>Stubovi</button>
+            </div>
+            <div class="text-center">
+                <button class="menu-btn menu-btn-1" [routerLink]="['/cesme']" routerLinkActive="router-link-active" mat-button>Cesme</button>
+            </div>
+        </div>
+    </mat-drawer>
+    <mat-drawer-content>
+        <div class="header-div">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <a [routerLink]="['/']" routerLinkActive="router-link-active"><img src="../../assets/img/LogoPNG.png" style="width: 50px;" alt="" class="img-fluid"> </a>
+                <button class="navbar-toggler" (click)="drawer.toggle()">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-          <div class="navbar-nav">
-            <a class="nav-item nav-link active"  routerLinkActive="router-link-active" >Pocetna <span class="sr-only">(current)</span></a>
-            <a class="nav-item nav-link" [routerLink]="['/ograde']" routerLinkActive="router-link-active" >Ograde</a>
-            <a class="nav-item nav-link" [routerLink]="['/cesme']" routerLinkActive="router-link-active" >Cesme</a>
-            <a class="nav-item nav-link" [routerLink]="['/stubovi']" routerLinkActive="router-link-active" >Stubovi</a>
-            <a class="nav-item nav-link " [routerLink]="['/objekti']" routerLinkActive="router-link-active" >Montazni objekti</a>
-          </div>
-        </div>
-      </nav>
-      <div class="" style="display: none;">
-        <button class="menu-btn" color="primary" mat-button (click)="drawer.toggle()">
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav">
+                        <a class="nav-item nav-link active" routerLinkActive="router-link-active">Pocetna <span class="sr-only">(current)</span></a>
+                        <a class="nav-item nav-link" [routerLink]="['/ograde']" routerLinkActive="router-link-active">Ograde</a>
+                        <a class="nav-item nav-link" [routerLink]="['/cesme']" routerLinkActive="router-link-active">Cesme</a>
+                        <a class="nav-item nav-link" [routerLink]="['/stubovi']" routerLinkActive="router-link-active">Stubovi</a>
+                        <a class="nav-item nav-link " [routerLink]="['/objekti']" routerLinkActive="router-link-active">Montazni objekti</a>
+                    </div>
+                </div>
+            </nav>
+            <div class="" style="display: none;">
+                <button class="menu-btn" color="primary" mat-button (click)="drawer.toggle()">
           <mat-icon class="menu-icon">menu</mat-icon>
         </button>
-      </div>
-      <div class="header container">
-        <h1 class="text-center header-h1">Betonske ograde</h1>
-        <mat-divider></mat-divider>
-        <p class="header-paragraf text-center">Betonske ograde vrhunskog kvaliteta i modernog dizajna</p>
-      </div>
-      <div>
-        <swiper [config]="config">
-          <div class="swiper-wrapper product-slider-container">
-
-            <div class="swiper-slide swiper-slide-1"></div>
-            <div class="swiper-slide swiper-slide-2"></div>
-            <div class="swiper-slide swiper-slide-3"></div>
-
-          </div>
-
-          <!-- Add Pagination -->
-          <div class="swiper-pagination"></div>
-
-          <!-- Add Arrows -->
-
-        </swiper>
-      </div>
-    </div>
-
-    <div class="about-div">
-      <div class="container">
-        <div class="row">
-          <div class="col-sm">
-            <img src="../../assets/img/about-people.png" alt="" class="img-fluid">
-          </div>
-          <div class="col-sm text-center">
-            <h1 class="about-h1">O nama</h1>
-            <mat-divider class="orange-divider"></mat-divider>
-            <p class="text-center about-paragraf">
-              Firma "CUCA" je osnovana 1997 godine. Od otvaranja radimo na proširivanju asortimana kako bi zadovoljili
-              zelje mnogobrojnih kupaca širom Srbije. Mnogobrojni modeli ograda, grčkih stubova, česmi, žardinjera,
-              bastenskih garnitura.. Zadovoljstvo nam je da vam učinimo životno okruženje lepšim uz ograde "CUCA".
-              Dobrodošli!
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="card-div text-center">
-      <div class="container">
-        <div class="card-header-div">
-          <h1>Proizvodi</h1>
-          <mat-divider class="orange-divider"></mat-divider>
-        </div>
-        <div class="row">
-          <div class="col-sm">
-            <img src="../../assets/img/cesme-card.jpg" alt="" class="img-fluid">
-            <h3 class="card-h3">Betonske česme</h3>
-            <mat-divider class="orange-divider"></mat-divider>
-            <p>Betonske cesme, imitacija teraco kamena, farbane najkvalitetnijom bojom za beton, otporne na sve
-              vremenske uslove.</p>
-          </div>
-          <div class="col-sm">
-            <img src="../../assets/img/balvani-croped.jpg" alt="" class="img-fluid">
-            <h3 class="card-h3">Betonske ograde</h3>
-            <mat-divider class="orange-divider"></mat-divider>
-            <p>Kvalitet i moderan dizajn jesu glavni aduti naših ograda.U ponudi imamo preko 16 različitih
-              modela.Montaža i do 80 metara dnevno.</p>
-          </div>
-        </div>
-        <div class="row second-row">
-          <div class="col-sm">
-            <img src="../../assets/img/005_stubovi_grcki_02_40.jpg
-            " alt="" class="img-fluid">
-            <h3 class="card-h3">Grčki stubovi</h3>
-            <mat-divider class="orange-divider"></mat-divider>
-            <p>Grčki stubovi su izrađeni od visokokvalitetnog betona uz dodatak polučelične armature po projektu,
-              aditiva za poboljšanje kvaliteta betona i najfinije su obrađeni.</p>
-          </div>
-          <div class="col-sm">
-            <img src="../../assets/img/montazni-header.jpg" alt="" class="img-fluid">
-            <h3 class="card-h3">Montažni objekti</h3>
-            <mat-divider class="orange-divider"></mat-divider>
-            <p>Montažni objekti su napravljeni od panela ograda koje su sve više tražene.Prednost je što se veoma brzo i
-              jednostavno grade,uz minimalno održavanje i ogromnu uštedu novca u odnosu na zidanje.Radimo
-              garaže,ostave,šupe,kućice za životinje</p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="fop-div">
-      <div class="container">
-        <div class="row">
-          <div class="col-sm">
-            <img src="../../assets/img/sticker.jpg" alt="" class="img-fluid">
-          </div>
-          <div class="col-sm">
-            <div class="firma-od-poverenja-div">
-              <h1 class="text-center">Član firme od poverenja</h1>
-              <p class="text-center">Betonski elementi "CUCA" Obrež.Ova kompanija je dobitnik Sertifikata za godinu
-                2018. Sertifikat "Firma od
-                poverenja" se dodelljuje privrednicima sa dobrom reputacijom među klijentima i saradnicima.
-                Sertifikacija
-                je bazirana na inovativnom softverskom metodu uz pomoć kojeg se traga za negativnim komentarima na
-                internetu. Činjenica da o datoj kompaniji nismo pronašli negativne komentare, istoj omogućava učešće u
-                projektu "Firma od poverenja".</p>
-
-              <div class="text-center">
-                <button class="fop-btn" mat-raised-button onclick="location.href=''" color="primary">Klik za više
-                  informacija</button>
-              </div>
             </div>
-          </div>
-        </div>
-      </div>
-    </div>
+            <div class="header container">
+                <h1 class="text-center header-h1">Betonske ograde</h1>
+                <mat-divider></mat-divider>
+                <p class="header-paragraf text-center">Betonske ograde vrhunskog kvaliteta i modernog dizajna</p>
+            </div>
+            <div>
+                <swiper [config]="config">
+                    <div class="swiper-wrapper product-slider-container">
 
-    <div class="radna-akcija-div text-center container">
-      <div class="tex-center">
-        <img src="../../assets/img/Radna_Akcija_by_CERESIT.jpg" alt="" class="img-fluid radna-akcija-img">
-        <h1 class="text-center" style="padding-top: 1em;">Sa Tamarom u akciji</h1>
-        <p style="padding-top: 1em;">
-          O poverenju i kvalitetu naše firme,svedoči i to da smo učestvovali u serijalu "Sa Tamarom u akciji".Radovi su
-          se izvršavali u selu blizu Paraćina,koje nosi naziv Čepure. Detalje o tome možete pogledati na našoj facebook
-          stranici
-        </p>
-        <div class="text-center">
-          <button class="fop-btn" mat-raised-button onclick="location.href=''" color="primary">Klik za više
-            informacija</button>
+                        <div class="swiper-slide swiper-slide-1"></div>
+                        <div class="swiper-slide swiper-slide-2"></div>
+                        <div class="swiper-slide swiper-slide-3"></div>
+
+                    </div>
+
+                    <!-- Add Pagination -->
+                    <div class="swiper-pagination"></div>
+
+                    <!-- Add Arrows -->
+
+                </swiper>
+            </div>
         </div>
-      </div>
-    </div>
-    <app-footer></app-footer>
-  </mat-drawer-content>
+
+        <div class="about-div">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm">
+                        <img src="../../assets/img/about-people.png" alt="" class="img-fluid">
+                    </div>
+                    <div class="col-sm text-center">
+                        <h1 class="about-h1">O nama</h1>
+                        <mat-divider class="orange-divider"></mat-divider>
+                        <p class="text-center about-paragraf">
+                            Firma "CUCA" je osnovana 1997 godine. Od otvaranja radimo na proširivanju asortimana kako bi zadovoljili zelje mnogobrojnih kupaca širom Srbije. Mnogobrojni modeli ograda, grčkih stubova, česmi, žardinjera, bastenskih garnitura.. Zadovoljstvo nam je da
+                            vam učinimo životno okruženje lepšim uz ograde "CUCA". Dobrodošli!
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card-div text-center">
+            <div class="container">
+                <div class="card-header-div">
+                    <h1>Proizvodi</h1>
+                    <mat-divider class="orange-divider"></mat-divider>
+                </div>
+                <div class="row">
+                    <div class="col-sm" [routerLink]="['/cesme']" routerLinkActive="router-link-active">
+                        <img src="../../assets/img/cesme-card.jpg" alt="" class="img-fluid">
+                        <h3 class="card-h3">Betonske česme</h3>
+                        <mat-divider class="orange-divider"></mat-divider>
+                        <p>Betonske cesme, imitacija teraco kamena, farbane najkvalitetnijom bojom za beton, otporne na sve vremenske uslove.</p>
+                    </div>
+                    <div class="col-sm" [routerLink]="['/ograde']" routerLinkActive="router-link-active">
+                        <img src="../../assets/img/balvani-croped.jpg" alt="" class="img-fluid">
+                        <h3 class="card-h3">Betonske ograde</h3>
+                        <mat-divider class="orange-divider"></mat-divider>
+                        <p>Kvalitet i moderan dizajn jesu glavni aduti naših ograda.U ponudi imamo preko 16 različitih modela.Montaža i do 80 metara dnevno.</p>
+                    </div>
+                </div>
+                <div class="row second-row">
+                    <div class="col-sm" [routerLink]="['/stubovi']" routerLinkActive="router-link-active">
+                        <img src="../../assets/img/005_stubovi_grcki_02_40.jpg
+            " alt="" class="img-fluid">
+                        <h3 class="card-h3">Grčki stubovi</h3>
+                        <mat-divider class="orange-divider"></mat-divider>
+                        <p>Grčki stubovi su izrađeni od visokokvalitetnog betona uz dodatak polučelične armature po projektu, aditiva za poboljšanje kvaliteta betona i najfinije su obrađeni.</p>
+                    </div>
+                    <div class="col-sm">
+                        <img src="../../assets/img/montazni-header.jpg" alt="" class="img-fluid">
+                        <h3 class="card-h3">Montažni objekti</h3>
+                        <mat-divider class="orange-divider"></mat-divider>
+                        <p>Montažni objekti su napravljeni od panela ograda koje su sve više tražene.Prednost je što se veoma brzo i jednostavno grade,uz minimalno održavanje i ogromnu uštedu novca u odnosu na zidanje.Radimo garaže,ostave,šupe,kućice za
+                            životinje
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="fop-div">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm">
+                        <img src="../../assets/img/sticker.jpg" alt="" class="img-fluid">
+                    </div>
+                    <div class="col-sm">
+                        <div class="firma-od-poverenja-div">
+                            <h1 class="text-center">Član firme od poverenja</h1>
+                            <p class="text-center">Betonski elementi "CUCA" Obrež.Ova kompanija je dobitnik Sertifikata za godinu 2018. Sertifikat "Firma od poverenja" se dodelljuje privrednicima sa dobrom reputacijom među klijentima i saradnicima. Sertifikacija je bazirana
+                                na inovativnom softverskom metodu uz pomoć kojeg se traga za negativnim komentarima na internetu. Činjenica da o datoj kompaniji nismo pronašli negativne komentare, istoj omogućava učešće u projektu "Firma od poverenja".</p>
+
+                            <div class="text-center">
+                                <button class="fop-btn" mat-raised-button onclick="location.href=''" color="primary">Klik za više
+                  informacija</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="radna-akcija-div text-center container">
+            <div class="tex-center">
+                <img src="../../assets/img/Radna_Akcija_by_CERESIT.jpg" alt="" class="img-fluid radna-akcija-img">
+                <h1 class="text-center" style="padding-top: 1em;">Sa Tamarom u akciji</h1>
+                <p style="padding-top: 1em;">
+                    O poverenju i kvalitetu naše firme,svedoči i to da smo učestvovali u serijalu "Sa Tamarom u akciji".Radovi su se izvršavali u selu blizu Paraćina,koje nosi naziv Čepure. Detalje o tome možete pogledati na našoj facebook stranici
+                </p>
+                <div class="text-center">
+                    <button class="fop-btn" mat-raised-button onclick="location.href=''" color="primary">Klik za više
+            informacija</button>
+                </div>
+            </div>
+        </div>
+        <app-footer></app-footer>
+    </mat-drawer-content>
 </mat-drawer-container>

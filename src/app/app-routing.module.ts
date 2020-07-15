@@ -6,7 +6,8 @@ import { BetonskeOgradeComponent } from './betonske-ograde/betonske-ograde.compo
 
 
 const routes: Routes = [
-  {path:'',component:HomeComponent},
+  {path:'',component:HomeComponent,
+  /* loadChildren: () => import('./home/home.module').then(m => m.HomeRoutingModule)*/},
   {path:'ograde',component:BetonskeOgradeComponent},
   {path:'stubovi',component:GrckiStuboviComponent}
 ];

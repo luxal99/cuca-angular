@@ -15,8 +15,6 @@ export class HomeComponent implements OnInit {
   
    }
 
-
-
   config: SwiperOptions = {
     effect: 'coverflow',
     grabCursor: true,
